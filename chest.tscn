@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bi6uawgn4t0ha"]
+
+[ext_resource type="Script" uid="uid://dxmfp8tyccq7d" path="res://chest.gd" id="1_8uwsg"]
+[ext_resource type="PackedScene" uid="uid://bu1ec5b6k1st0" path="res://kenney_mini-dungeon/Models/GLB format/chest.glb" id="2_bp1or"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8uwsg"]
+
+[node name="chest" type="StaticBody3D" unique_id=1635546860]
+script = ExtResource("1_8uwsg")
+
+[node name="chest2" parent="." unique_id=1277951984 instance=ExtResource("2_bp1or")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=623151855]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=690189614]
+transform = Transform3D(4.165, 0, 0, 0, 4.165, 0, 0, 0, 4.165, 0, 0, 0)
+shape = SubResource("SphereShape3D_8uwsg")

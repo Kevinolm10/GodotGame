@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ego38c36xqsa"]
+
+[ext_resource type="PackedScene" uid="uid://bsbfad5g8bwt2" path="res://kenney_graveyard-kit_5.0/Models/GLB format/crypt-b.glb" id="1_sn8ck"]
+
+[node name="Node3D" type="Node3D" unique_id=1208447156]
+
+[node name="crypt-b2" parent="." unique_id=1340749068 instance=ExtResource("1_sn8ck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19367659, 0, -0.042949677)
+
+[node name="crypt-b3" parent="." unique_id=104028794 instance=ExtResource("1_sn8ck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97543293, 0, -0.049457908)

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dl2brcdmmeb71"]
+
+[ext_resource type="PackedScene" uid="uid://cjdt141yh04r1" path="res://kenney_graveyard-kit_5.0/Models/GLB format/character-skeleton.glb" id="1_qg60r"]
+[ext_resource type="Script" uid="uid://b8qt8od5rnfwh" path="res://enemy.gd" id="2_ppgkr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qg60r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg60r"]
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ppgkr"]
+material = SubResource("StandardMaterial3D_qg60r")
+size = Vector2(1, 0.065)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o44yk"]
+albedo_color = Color(0.53681284, 0.9483275, 0.53612393, 1)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_637nb"]
+material = SubResource("StandardMaterial3D_o44yk")
+size = Vector2(1, 0.065)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppgkr"]
+albedo_color = Color(0.38549647, 0.929746, 0, 1)
+billboard_mode = 1
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=795979924 groups=["enemy"]]
+script = ExtResource("2_ppgkr")
+
+[node name="character-skeleton2" parent="." unique_id=890289956 instance=ExtResource("1_qg60r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014718771, -1.1920929e-07, -0.021372318)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=283095803]
+
+[node name="RayCast3D" type="RayCast3D" parent="Area3D" unique_id=1667225473 groups=["Ray"]]
+transform = Transform3D(1, 0, 0, 0, -0.017312778, 0.9998501, 0, -0.9998501, -0.017312778, -0.004586369, 0.45533514, 0.17592108)
+target_position = Vector3(0, -10.5, 0)
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 5
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=1470246630]
+transform = Transform3D(22.745, 0, 0, 0, 2.745, 4.2365865e-08, 0, -5.1129607e-09, 22.745, -0.87, 0.98, -1.355)
+shape = SubResource("SphereShape3D_qg60r")
+
+[node name="hp_bar_root" type="Node3D" parent="." unique_id=206574513]
+
+[node name="hp_bg" type="MeshInstance3D" parent="hp_bar_root" unique_id=1719815858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8036031, 0)
+mesh = SubResource("QuadMesh_ppgkr")
+
+[node name="enemyHP" type="MeshInstance3D" parent="hp_bar_root" unique_id=1511830991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.795, 0.01)
+mesh = SubResource("QuadMesh_637nb")
+surface_material_override/0 = SubResource("StandardMaterial3D_ppgkr")

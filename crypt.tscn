@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cytjulg8i22yt"]
+
+[ext_resource type="ArrayMesh" uid="uid://lf4alsdqiple" path="res://kenney_graveyard-kit_5.0/Models/OBJ format/crypt-large.obj" id="1_kavnk"]
+[ext_resource type="ArrayMesh" uid="uid://bimabff7iglgk" path="res://kenney_graveyard-kit_5.0/Models/OBJ format/crypt-large-roof.obj" id="2_asoj5"]
+[ext_resource type="Texture2D" uid="uid://ukqoittk3wca" path="res://kenney_graveyard-kit_5.0/Models/GLB format/Textures/colormap.png" id="2_d06a8"]
+[ext_resource type="PackedScene" uid="uid://5f4k2gfrau41" path="res://kenney_graveyard-kit_5.0/Models/GLB format/crypt-large-door.glb" id="4_d06a8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j76m"]
+albedo_texture = ExtResource("2_d06a8")
+
+[node name="Crypt" type="Node3D" unique_id=293254416]
+
+[node name="Walls" type="MeshInstance3D" parent="." unique_id=2066834655]
+mesh = ExtResource("1_kavnk")
+
+[node name="roof" type="MeshInstance3D" parent="." unique_id=2087041551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012289703, 0.977667, -0.0020366907)
+material_override = SubResource("StandardMaterial3D_6j76m")
+mesh = ExtResource("2_asoj5")
+
+[node name="crypt-large-door2" parent="." unique_id=4113565 instance=ExtResource("4_d06a8")]
+transform = Transform3D(0.2533021, 0, -0.96738726, 0, 1, 0, 0.96738726, 0, 0.2533021, -0.23334211, 0, 1.3699108)

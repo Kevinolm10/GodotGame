@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dnij18eyiix8g"]
+
+[ext_resource type="PackedScene" uid="uid://cby6nsu0lyg3r" path="res://kenney_graveyard-kit_5.0/Models/GLB format/debris.glb" id="1_eh7eu"]
+[ext_resource type="PackedScene" uid="uid://cpqr6ybyl42ol" path="res://kenney_graveyard-kit_5.0/Models/GLB format/candle.glb" id="2_estp8"]
+[ext_resource type="PackedScene" uid="uid://cx20c8pcugr6u" path="res://kenney_graveyard-kit_5.0/Models/GLB format/debris-wood.glb" id="2_rsa0g"]
+[ext_resource type="PackedScene" uid="uid://b8fcee41jrx0h" path="res://kenney_graveyard-kit_5.0/Models/GLB format/bench.glb" id="3_estp8"]
+
+[node name="Node3D" type="Node3D" unique_id=341973645]
+
+[node name="bench2" parent="." unique_id=382931155 instance=ExtResource("3_estp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049762487, 0, -0.010877371)
+
+[node name="candle2" parent="." unique_id=968656475 instance=ExtResource("2_estp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34534818, 0.23721725, 0.057637334)
+
+[node name="debris2" parent="." unique_id=1760176394 instance=ExtResource("1_eh7eu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7439115, 0, 0.3822208)
+
+[node name="debris-wood2" parent="." unique_id=1792574755 instance=ExtResource("2_rsa0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70141387, 0, 0.35403442)

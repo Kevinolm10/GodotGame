@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://caafixj6lyc4k"]
+
+[ext_resource type="PackedScene" uid="uid://c6my1rbmqn5am" path="res://kenney_graveyard-kit_5.0/Models/GLB format/character-zombie.glb" id="1_7k104"]
+[ext_resource type="Script" uid="uid://b8qt8od5rnfwh" path="res://enemy.gd" id="2_4gyqm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4gyqm"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1221722749 groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8262181, -2.8980758, 1.39622)
+script = ExtResource("2_4gyqm")
+
+[node name="character-zombie2" parent="." unique_id=866826264 instance=ExtResource("1_7k104")]
+transform = Transform3D(1.585, 0, 0, 0, 1.585, 0, 0, 0, 1.585, -0.83882165, -0.30703473, -1.3114102)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=984835677]
+
+[node name="RayCast3D" type="RayCast3D" parent="Area3D" unique_id=144646812 groups=["Ray"]]
+transform = Transform3D(1, 0, 0, 0, -0.017312778, 0.9998501, 0, -0.9998501, -0.017312778, -0.85196793, 0.650332, -1.0434196)
+target_position = Vector3(0, -10.5, 0)
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 5
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=1432254137]
+transform = Transform3D(22.745, 0, 0, 0, 2.745, 4.2365865e-08, 0, -5.1129607e-09, 22.745, -0.87, 0.98, -1.355)
+shape = SubResource("SphereShape3D_4gyqm")
+
+[node name="hp_bar_root" type="Node3D" parent="." unique_id=1579122344]
+
+[node name="hp_bg" type="MeshInstance3D" parent="hp_bar_root" unique_id=1348474015]
+
+[node name="enemyHP" type="MeshInstance3D" parent="hp_bar_root" unique_id=59635484]

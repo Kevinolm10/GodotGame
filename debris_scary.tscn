@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ltyvdpt87n21"]
+
+[ext_resource type="PackedScene" uid="uid://d2w26ly2sbvjo" path="res://kenney_graveyard-kit_5.0/Models/GLB format/trunk.glb" id="1_g20ec"]
+[ext_resource type="PackedScene" uid="uid://beto7erkkwyd" path="res://kenney_graveyard-kit_5.0/Models/GLB format/trunk-long.glb" id="2_817mj"]
+[ext_resource type="PackedScene" uid="uid://b6qefvyqi1idp" path="res://kenney_graveyard-kit_5.0/Models/GLB format/rocks-tall.glb" id="3_7r2oy"]
+[ext_resource type="PackedScene" uid="uid://dtl8nbppvgl0x" path="res://kenney_graveyard-kit_5.0/Models/GLB format/rocks.glb" id="4_lntnn"]
+[ext_resource type="PackedScene" uid="uid://c4ih3rapyqnna" path="res://kenney_graveyard-kit_5.0/Models/GLB format/shovel-dirt.glb" id="5_3tdms"]
+[ext_resource type="PackedScene" uid="uid://xin41ka3g2tb" path="res://kenney_graveyard-kit_5.0/Models/GLB format/pillar-obelisk.glb" id="6_t2o40"]
+
+[node name="DebrisScary" type="Node3D" unique_id=1921986015]
+
+[node name="trunk2" parent="." unique_id=188253489 instance=ExtResource("1_g20ec")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45181477, 0, 1.159439)
+
+[node name="trunk-long2" parent="." unique_id=1951005266 instance=ExtResource("2_817mj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9149335, 0, -0.24249554)
+
+[node name="rocks-tall2" parent="." unique_id=992063761 instance=ExtResource("3_7r2oy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47119248, 0, -0.07787156)
+
+[node name="rocks2" parent="." unique_id=848041831 instance=ExtResource("4_lntnn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3214539, 0, 0.82578707)
+
+[node name="shovel-dirt2" parent="." unique_id=1213965244 instance=ExtResource("5_3tdms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56700027, 0, 0.34250927)
+
+[node name="pillar-obelisk2" parent="." unique_id=755235755 instance=ExtResource("6_t2o40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5799025, 0, -0.008990288)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://48mud26it4mn"]
+
+[ext_resource type="PackedScene" uid="uid://hhbkqcsmx2ui" path="res://kenney_graveyard-kit_5.0/Models/GLB format/road.glb" id="1_djvtd"]
+
+[node name="Node3D" type="Node3D" unique_id=1963444889]
+
+[node name="road2" parent="." unique_id=1280315338 instance=ExtResource("1_djvtd")]
+transform = Transform3D(1, 0, 0, 0, -0.8746198, -0.48480955, 0, 0.48480955, -0.8746198, -0.12345338, 0, -0.03626883)

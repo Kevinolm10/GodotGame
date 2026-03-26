@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bt4qp3n8wa1wb"]
+
+[ext_resource type="PackedScene" uid="uid://betdiq3xacrgf" path="res://kenney_graveyard-kit_5.0/Models/GLB format/pine-fall.glb" id="1_jtv63"]
+[ext_resource type="PackedScene" uid="uid://51pbbkhr3xyc" path="res://kenney_graveyard-kit_5.0/Models/GLB format/pine-crooked.glb" id="2_hixr7"]
+[ext_resource type="PackedScene" uid="uid://dc6jclk043are" path="res://kenney_graveyard-kit_5.0/Models/GLB format/pine.glb" id="3_ai2lm"]
+[ext_resource type="PackedScene" uid="uid://ctslp4aigia4s" path="res://kenney_graveyard-kit_5.0/Models/GLB format/pumpkin-carved.glb" id="4_hy5i0"]
+[ext_resource type="PackedScene" uid="uid://b6qefvyqi1idp" path="res://kenney_graveyard-kit_5.0/Models/GLB format/rocks-tall.glb" id="5_34nh1"]
+
+[node name="Rockntrees" type="Node3D" unique_id=1292430260]
+
+[node name="pine-fall2" parent="." unique_id=1705313518 instance=ExtResource("1_jtv63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2746426, 0, 0.36288333)
+
+[node name="pine-crooked2" parent="." unique_id=641687670 instance=ExtResource("2_hixr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6011946, 4.7683716e-07, 1.5025773)
+
+[node name="pine2" parent="." unique_id=1375027263 instance=ExtResource("3_ai2lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4382346, 0, -0.17633009)
+
+[node name="pumpkin-carved2" parent="." unique_id=1172607748 instance=ExtResource("4_hy5i0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1671004, 0, 0.8234854)
+
+[node name="pumpkin-carved3" parent="." unique_id=504657362 instance=ExtResource("4_hy5i0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5827899, 0, 1.130774)
+
+[node name="rocks-tall2" parent="." unique_id=992063761 instance=ExtResource("5_34nh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18170893, 0, 1.6431804)
+
+[node name="rocks-tall3" parent="." unique_id=1768312357 instance=ExtResource("5_34nh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9459715, 1.1920929e-07, 0.4950807)

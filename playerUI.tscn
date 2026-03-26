@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cshqffk46725d"]
+
+[ext_resource type="Script" uid="uid://0pc6785vra8y" path="res://mainCHUI.gd" id="1_pm3rl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1j5ju"]
+
+[node name="Node3D" type="CanvasLayer" unique_id=1029561769]
+
+[node name="Control" type="Control" parent="." unique_id=1129232746]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1112.0
+offset_bottom = 324.0
+script = ExtResource("1_pm3rl")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1129609677]
+layout_mode = 0
+offset_right = 518.0
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="Control" unique_id=674029053]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 64.0
+offset_right = 182.0
+offset_bottom = 101.0
+text = "HP"
+
+[node name="crosshair" type="Label" parent="Control" unique_id=358030937]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 542.0
+offset_right = 1059.0
+offset_bottom = 584.0
+label_settings = SubResource("LabelSettings_1j5ju")

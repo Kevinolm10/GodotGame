@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r7ogu2g01rni"
+path="res://.godot/imported/character-keeper.obj-11449b61627577055df3d1aef44cb0ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/character-keeper.obj-11449b61627577055df3d1aef44cb0ee.mesh"]
+
+source_file="res://kenney_graveyard-kit_5.0/Models/OBJ format/character-keeper.obj"
+dest_files=["res://.godot/imported/character-keeper.obj-11449b61627577055df3d1aef44cb0ee.mesh", "res://.godot/imported/character-keeper.obj-11449b61627577055df3d1aef44cb0ee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

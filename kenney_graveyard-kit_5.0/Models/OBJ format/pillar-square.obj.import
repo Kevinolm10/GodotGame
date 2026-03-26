@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://br1epeif8aosr"
+path="res://.godot/imported/pillar-square.obj-0f7d2ff188d8cbfab16e9a1554642d37.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar-square.obj-0f7d2ff188d8cbfab16e9a1554642d37.mesh"]
+
+source_file="res://kenney_graveyard-kit_5.0/Models/OBJ format/pillar-square.obj"
+dest_files=["res://.godot/imported/pillar-square.obj-0f7d2ff188d8cbfab16e9a1554642d37.mesh", "res://.godot/imported/pillar-square.obj-0f7d2ff188d8cbfab16e9a1554642d37.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

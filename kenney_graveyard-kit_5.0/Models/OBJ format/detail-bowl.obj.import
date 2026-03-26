@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kfd2rmxx8jk"
+path="res://.godot/imported/detail-bowl.obj-c1c82be88a2cae0da80f9bcfd890775f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail-bowl.obj-c1c82be88a2cae0da80f9bcfd890775f.mesh"]
+
+source_file="res://kenney_graveyard-kit_5.0/Models/OBJ format/detail-bowl.obj"
+dest_files=["res://.godot/imported/detail-bowl.obj-c1c82be88a2cae0da80f9bcfd890775f.mesh", "res://.godot/imported/detail-bowl.obj-c1c82be88a2cae0da80f9bcfd890775f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0a72412ki8j7"]
+
+[ext_resource type="Texture2D" uid="uid://ukqoittk3wca" path="res://kenney_graveyard-kit_5.0/Models/GLB format/Textures/colormap.png" id="1_7hx3u"]
+
+[resource]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_7hx3u")
