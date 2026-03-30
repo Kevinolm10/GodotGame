@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://qw3kuasvqrvp"]
+
+[ext_resource type="PackedScene" uid="uid://ct2tn4dxmfaw2" path="res://kenney_graveyard-kit_5.0/Models/GLB format/character-keeper.glb" id="1_k7jey"]
+[ext_resource type="PackedScene" uid="uid://cbv4ikhioya2h" path="res://kenney_graveyard-kit_5.0/Models/GLB format/shovel.glb" id="2_snksa"]
+
+[node name="character-keeper2" unique_id=1209679269 instance=ExtResource("1_k7jey")]
+
+[node name="arm-right" parent="character-keeper/root/torso" parent_id_path=PackedInt32Array(704620155) index="1" unique_id=982550517]
+transform = Transform3D(0.78247297, -0.60041267, 0.1650476, 0.6087614, 0.7933533, 0, -0.13094106, 0.10047461, 0.9862856, -0.125, 0.15, 0.0024999976)
+
+[node name="shovel2" parent="character-keeper/root/torso/arm-right" index="0" unique_id=1564562841 instance=ExtResource("2_snksa")]
+transform = Transform3D(0.97437006, -0.22464275, 0.011773032, 0, 0.052335974, 0.9986295, -0.22495104, -0.9730347, 0.050994605, -0.127, -0.02, 0.43)
+
+[node name="arm-left" parent="character-keeper/root/torso" parent_id_path=PackedInt32Array(704620155) index="2" unique_id=731823155]
+transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, 0.125, 0.15, 0.0024999976)

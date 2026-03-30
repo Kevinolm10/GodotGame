@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ckm32mkd10pls"]
 
 [ext_resource type="Script" uid="uid://cqqmlqur4y8sr" path="res://McharacterMovement.gd" id="1_li8uu"]
-[ext_resource type="PackedScene" uid="uid://ct2tn4dxmfaw2" path="res://kenney_graveyard-kit_5.0/Models/GLB format/character-keeper.glb" id="2_m1j4b"]
 [ext_resource type="PackedScene" uid="uid://cshqffk46725d" path="res://playerUI.tscn" id="3_ffy1q"]
+[ext_resource type="PackedScene" uid="uid://qw3kuasvqrvp" path="res://keeper.tscn" id="3_se01g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m1j4b"]
 size = Vector3(1, 1, 0.421875)
@@ -14,11 +14,11 @@ script = ExtResource("1_li8uu")
 transform = Transform3D(1, 0, 0, 0, 0.9766723, 0.21473533, 0, -0.21473533, 0.9766723, 0, 0.985, 1.22)
 fov = 83.3
 
-[node name="keeper" parent="." unique_id=1644329302 instance=ExtResource("2_m1j4b")]
-transform = Transform3D(-0.99999845, 0, -0.0017453105, 0, 1, 0, 0.0017453105, 0, -0.99999845, 0, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=54030807]
 transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, -1.1641532e-10, 0.41651863, 0.11388771)
 shape = SubResource("BoxShape3D_m1j4b")
 
 [node name="playerUI" parent="." unique_id=1029561769 instance=ExtResource("3_ffy1q")]
+
+[node name="keeper" parent="." unique_id=1209679269 instance=ExtResource("3_se01g")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

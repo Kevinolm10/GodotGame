@@ -33,3 +33,9 @@ offset_top = 542.0
 offset_right = 1059.0
 offset_bottom = 584.0
 label_settings = SubResource("LabelSettings_1j5ju")
+
+[node name="killcount" type="Label" parent="Control" unique_id=1073011966]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 75.0
+offset_bottom = 125.0
