@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ccdy2a42ouhiy"]
+
+[ext_resource type="Script" uid="uid://dxmfp8tyccq7d" path="res://chest.gd" id="1_23okj"]
+[ext_resource type="PackedScene" uid="uid://ns06wgsfbnsw" path="res://Blender obj/CryptChest.glb" id="1_xk852"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ujfl5"]
+
+[node name="CryptCh" type="StaticBody3D" unique_id=456449926]
+script = ExtResource("1_23okj")
+
+[node name="CryptCHObj" parent="." unique_id=68077507 instance=ExtResource("1_xk852")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1428552095]
+transform = Transform3D(1.525, 0, 0, 0, 1.525, 0, 0, 0, 1.525, -1, 0, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=468847350]
+transform = Transform3D(4.165, 0, 0, 0, 4.165, 0, 0, 0, 4.165, 0, 0, 0)
+shape = SubResource("SphereShape3D_ujfl5")

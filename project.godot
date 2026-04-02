@@ -56,6 +56,10 @@ project/assembly_name="TESTGAME"
 
 enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_left={

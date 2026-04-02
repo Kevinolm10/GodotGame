@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://caafixj6lyc4k" path="res://enemy.tscn" id="22_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dl2brcdmmeb71" path="res://Skeleton.tscn" id="23_d13ii"]
 [ext_resource type="PackedScene" uid="uid://lkri85kfg72x" path="res://kenney_graveyard-kit_5.0/Models/GLB format/hay-bale-bundled.glb" id="27_a6jrf"]
-[ext_resource type="PackedScene" uid="uid://bi6uawgn4t0ha" path="res://chest.tscn" id="28_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://ccdy2a42ouhiy" path="res://CryptChest.tscn" id="31_seu75"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 
@@ -171,7 +171,7 @@ environment = SubResource("Environment_272bh")
 transform = Transform3D(-0.6355258, 0, 0.7720796, 0, 1, 0, -0.7720796, 0, -0.6355258, 33.06691, -0.004, -20.361164)
 
 [node name="Crypt" parent="." unique_id=1333612682 instance=ExtResource("3_h2yge")]
-transform = Transform3D(3.6201842, 0, 3.704951, 0, 5.18, 0, -3.704951, 0, 3.6201842, -20.629492, -0.004, -13.97734)
+transform = Transform3D(2.4635425, 0, 2.5212266, 0, 3.525, 0, -2.5212266, 0, 2.4635425, -20.629492, -0.004, -13.97734)
 
 [node name="CryptCoffin" parent="." unique_id=721861360 instance=ExtResource("4_lquwl")]
 transform = Transform3D(3.07, 0, 0, 0, 3.07, 0, 0, 0, 3.07, 0, -0.004, 21.949453)
@@ -324,11 +324,11 @@ transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 32, 0, -
 [node name="hay-bale-bundled3" parent="." unique_id=725316503 instance=ExtResource("27_a6jrf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -23)
 
-[node name="chest" parent="." unique_id=1635546860 instance=ExtResource("28_xuqvo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, -22)
-
 [node name="CharacterBody3D" parent="." unique_id=1221722749 instance=ExtResource("22_ryguw")]
 transform = Transform3D(-0.7097306, 0, -0.7044732, 0, 1, 0, 0.7044732, 0, -0.7097306, 10.28345, 0.2952708, -30.055529)
 
 [node name="CharacterBody3D2" parent="." unique_id=795979924 instance=ExtResource("23_d13ii")]
 transform = Transform3D(0.59727526, 0, 0.80203635, 0, 1, 0, -0.80203635, 0, 0.59727526, 30.280537, 0.014256835, -3.6766272)
+
+[node name="CryptCh" parent="." unique_id=456449926 instance=ExtResource("31_seu75")]
+transform = Transform3D(0.805, 0, 0, 0, 0.805, 0, 0, 0, 0.805, 27, 0.415, -30)
