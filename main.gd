@@ -9,8 +9,8 @@ func _ready() -> void:
 	#get_tree().debug_collisions_hint = true
 
 func _create_world_border() -> void:
-	var border_size_x : float = 500
-	var border_size_z : float = 500
+	var border_size_x : float = 280.0
+	var border_size_z : float = 200.0
 	var wall_bottom   : float = -2.0
 	var wall_top      : float = 10.0
 	var wall_height   : float = wall_top - wall_bottom
