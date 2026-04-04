@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cxa1vcal0v6uj"]
+
+[ext_resource type="Script" uid="uid://cetdiym762ar2" path="res://shop.gd" id="1_gmb2m"]
+[ext_resource type="PackedScene" uid="uid://c4rp4lkrxagr7" path="res://kenney_mini-dungeon/Models/GLB format/character-human.glb" id="2_8kdgp"]
+[ext_resource type="PackedScene" uid="uid://bralneum8m8s0" path="res://kenney_mini-dungeon/Models/GLB format/barrel.glb" id="3_myf4l"]
+[ext_resource type="PackedScene" uid="uid://dfpdinbaeskvx" path="res://kenney_mini-dungeon/Models/GLB format/banner.glb" id="4_p5a0g"]
+[ext_resource type="PackedScene" uid="uid://lkri85kfg72x" path="res://kenney_graveyard-kit_5.0/Models/GLB format/hay-bale-bundled.glb" id="5_xqmyw"]
+[ext_resource type="PackedScene" uid="uid://dqb0ypkygt1xc" path="res://kenney_graveyard-kit_5.0/Models/GLB format/hay-bale.glb" id="6_sw5c6"]
+[ext_resource type="PackedScene" uid="uid://slje7hy4m7f5" path="res://shopUI.tscn" id="7_8kdgp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_msgp6"]
+
+[node name="Shop" type="Node3D" unique_id=894419517]
+script = ExtResource("1_gmb2m")
+
+[node name="shop-keeper" parent="." unique_id=1999295178 instance=ExtResource("2_8kdgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101418495, 0, 0.6690197)
+
+[node name="Area3D" type="Area3D" parent="shop-keeper" unique_id=569664496]
+transform = Transform3D(2.78, 0, 0, 0, 2.78, 0, 0, 0, 2.78, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop-keeper/Area3D" unique_id=1277984327]
+shape = SubResource("SphereShape3D_msgp6")
+
+[node name="ShopExterior" type="Node3D" parent="." unique_id=1583422568]
+
+[node name="barrel" parent="." unique_id=966204779 instance=ExtResource("3_myf4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63228285, 0, 1.4981761)
+
+[node name="banner" parent="." unique_id=688801700 instance=ExtResource("4_p5a0g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71010494, 0.3120041, 1.8151925)
+
+[node name="hb1" parent="." unique_id=662645333 instance=ExtResource("5_xqmyw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13279009, 0, 1.1207517)
+
+[node name="h1" parent="." unique_id=998617380 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47890332, 0, 1.1186117)
+
+[node name="h2" parent="." unique_id=1183680416 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737576, 5.9604645e-08, 1.1294296)
+
+[node name="h3" parent="." unique_id=1171287174 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737576, 0.29988766, 1.1294296)
+
+[node name="h4" parent="." unique_id=666309503 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737576, 0.61395526, 1.1294296)
+
+[node name="h5" parent="." unique_id=935805660 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737576, 0.8875593, 1.1294296)
+
+[node name="h6" parent="." unique_id=1470647619 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14881194, 0.8875593, 1.1294296)
+
+[node name="h7" parent="." unique_id=2141092396 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45669663, 0.8875593, 1.1294296)
+
+[node name="h8" parent="." unique_id=1586010351 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45669663, 0.59749585, 1.1294296)
+
+[node name="h9" parent="." unique_id=1713052497 instance=ExtResource("6_sw5c6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45669663, 0.31269544, 1.1294296)
+
+[node name="ShopUi" parent="." unique_id=717144230 instance=ExtResource("7_8kdgp")]

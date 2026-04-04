@@ -16,14 +16,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00
 [node name="detectionzone" type="Area3D" parent="." unique_id=1160824972]
 
 [node name="RayCast3D" type="RayCast3D" parent="detectionzone" unique_id=109658758 groups=["Ray"]]
-transform = Transform3D(-1, 8.7409454e-08, 1.525733e-09, 0, -0.01745235, 0.99984765, 8.742278e-08, 0.99984765, 0.01745235, -0.041384578, 0.650332, -0.26155412)
+transform = Transform3D(-0.82, -5.2140805e-08, 1.2510434e-09, 2.1607907e-09, -0.01431027, 0.8198751, -5.2111034e-08, 0.8198751, 0.01431027, -0.041384578, 0.650332, -0.26155412)
 target_position = Vector3(0, -10.5, 0)
 collide_with_areas = true
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="detectionzone" unique_id=73125561]
-transform = Transform3D(22.745, 0, 0, 0, 2.745, 4.2365865e-08, 0, -5.1129607e-09, 22.745, -0.87, 0.98, -1.355)
+transform = Transform3D(16.985, 0, 0, 0, 2.05, 3.163703e-08, 0, -3.8184225e-09, 16.985, -0.87, 0.98, -1.355)
 shape = SubResource("SphereShape3D_qg60r")
 
 [node name="hp_bar_root2" type="Node3D" parent="." unique_id=344726981]

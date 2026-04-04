@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dxmfp8tyccq7d" path="res://chest.gd" id="1_23okj"]
 [ext_resource type="PackedScene" uid="uid://ns06wgsfbnsw" path="res://Blender obj/CryptChest.glb" id="1_xk852"]
+[ext_resource type="PackedScene" uid="uid://dx3efshu8irbb" path="res://loot_bundle.tscn" id="2_ujfl5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ujfl5"]
 
 [node name="CryptCh" type="StaticBody3D" unique_id=456449926]
 script = ExtResource("1_23okj")
+loot_table = Array[PackedScene]([ExtResource("2_ujfl5")])
 
 [node name="CryptCHObj" parent="." unique_id=68077507 instance=ExtResource("1_xk852")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)

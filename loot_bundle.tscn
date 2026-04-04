@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dx3efshu8irbb"]
+
+[ext_resource type="PackedScene" uid="uid://hyp07vdw6xf" path="res://kenney_mini-dungeon/Models/GLB format/weapon-sword.glb" id="1_njpac"]
+[ext_resource type="PackedScene" uid="uid://ykjalfatcau2" path="res://kenney_mini-dungeon/Models/GLB format/coin.glb" id="2_j08bg"]
+[ext_resource type="PackedScene" uid="uid://c47qh1hrkur5f" path="res://kenney_mini-dungeon/Models/GLB format/shield-round.glb" id="3_ibeok"]
+[ext_resource type="PackedScene" uid="uid://b41fhc0dul8nf" path="res://kenney_mini-dungeon/Models/GLB format/weapon-spear.glb" id="4_6fp2x"]
+
+[node name="LootBundle" type="Node3D" unique_id=1691015418]
+
+[node name="Sword" parent="." unique_id=246451919 instance=ExtResource("1_njpac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16590309, 1.1920929e-07, 0.041470766)
+
+[node name="Coin" parent="." unique_id=743331659 instance=ExtResource("2_j08bg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43726867, 0, 0.09897423)
+
+[node name="Shield" parent="." unique_id=923565233 instance=ExtResource("3_ibeok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9500074, 0, -0.1426394)
+
+[node name="Spear" parent="." unique_id=1471969873 instance=ExtResource("4_6fp2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3921099, -5.9604645e-08, 0.14098167)

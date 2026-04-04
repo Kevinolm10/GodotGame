@@ -17,14 +17,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.32509255)
 
 [node name="RayCast3D" type="RayCast3D" parent="detectionzone" unique_id=144646812 groups=["Ray"]]
-transform = Transform3D(-1, 8.7409454e-08, 1.525733e-09, 0, -0.01745235, 0.99984765, 8.742278e-08, 0.99984765, 0.01745235, -0.020121932, 0.57736677, -0.5652796)
+transform = Transform3D(-0.71, -4.5146304e-08, 1.0832205e-09, 1.8709285e-09, -0.0123906, 0.70989186, -4.5120526e-08, 0.70989186, 0.0123906, -0.020121932, 0.57736677, -0.5652796)
 target_position = Vector3(0, -10.5, 0)
 collide_with_areas = true
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="detectionzone" unique_id=1432254137]
-transform = Transform3D(22.745, 0, 0, 0, 2.745, 4.2365865e-08, 0, -5.1129607e-09, 22.745, -0.87, 0.98, -1.355)
+transform = Transform3D(14.065, 0, 0, 0, 1.697, 2.6198103e-08, 0, -3.1609089e-09, 14.065, -0.87, 0.98, -1.355)
 shape = SubResource("SphereShape3D_4gyqm")
 
 [node name="hp_bar_root" type="Node3D" parent="." unique_id=1579122344]
@@ -34,7 +34,7 @@ shape = SubResource("SphereShape3D_4gyqm")
 [node name="enemyHP" type="MeshInstance3D" parent="hp_bar_root" unique_id=59635484]
 
 [node name="hitbox" type="Area3D" parent="." unique_id=2011179757]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38, 0.249, -1.27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38, 0.249, -1.3751894)
 
 [node name="hitboxshape" type="CollisionShape3D" parent="hitbox" unique_id=1499240322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6877034, 0.07929577, 1.2654282)

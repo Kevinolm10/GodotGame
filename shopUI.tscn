@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://slje7hy4m7f5"]
+
+[ext_resource type="Texture2D" uid="uid://bmrsuw4bnusai" path="res://kenney_mini-dungeon/Previews/coin.png" id="1_p6md2"]
+
+[node name="Control" type="Control" unique_id=717144230]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=462401783]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -290.0
+offset_right = 240.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemContainer" type="VBoxContainer" parent="PanelContainer" unique_id=194426734]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Item1" type="Label" parent="PanelContainer/ItemContainer" unique_id=2093602888]
+layout_mode = 2
+
+[node name="Item2" type="Label" parent="PanelContainer/ItemContainer" unique_id=444876270]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1952979886]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="PanelContainer/ButtonContainer" unique_id=981174513]
+layout_mode = 2
+text = "BUY:                      "
+icon = ExtResource("1_p6md2")
+icon_alignment = 1

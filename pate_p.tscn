@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://snuvu816egoy"]
+
+[ext_resource type="PackedScene" uid="uid://dcfy0qbum6r0e" path="res://kenney_graveyard-kit_5.0/Models/GLB format/detail-plate.glb" id="1_3skkg"]
+[ext_resource type="Script" uid="uid://gakemt2bxhod" path="res://plate.gd" id="1_mn2qw"]
+
+[node name="PateP" type="Node3D" unique_id=2016851414]
+script = ExtResource("1_mn2qw")
+
+[node name="Plate" parent="." unique_id=737485478 instance=ExtResource("1_3skkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03644955, 0, -0.059131622)

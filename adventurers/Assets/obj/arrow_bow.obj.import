@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctna4avlvk1j"
+path="res://.godot/imported/arrow_bow.obj-06af0f40f25d4c12b2051f2cd7ff70be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/arrow_bow.obj-06af0f40f25d4c12b2051f2cd7ff70be.mesh"]
+
+source_file="res://adventurers/Assets/obj/arrow_bow.obj"
+dest_files=["res://.godot/imported/arrow_bow.obj-06af0f40f25d4c12b2051f2cd7ff70be.mesh", "res://.godot/imported/arrow_bow.obj-06af0f40f25d4c12b2051f2cd7ff70be.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

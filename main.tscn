@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://ckm32mkd10pls" path="res://MainCharacter.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://52cfmw1yqxgk" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="2_0odxb"]
 [ext_resource type="Resource" uid="uid://bkephp552xg0s" path="res://Terra/data.hterrain" id="2_lswn8"]
+[ext_resource type="PackedScene" uid="uid://byi5riyhne5dm" path="res://kenney_pirate-kit/Models/GLB format/palm-straight.glb" id="2_wnkbs"]
+[ext_resource type="PackedScene" uid="uid://dwpqncpbxctp3" path="res://kenney_pirate-kit/Models/GLB format/palm-detailed-bend.glb" id="3_f6a44"]
 [ext_resource type="PackedScene" uid="uid://cytjulg8i22yt" path="res://crypt.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ego38c36xqsa" path="res://CryptCoffin.tscn" id="4_lquwl"]
 [ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="5_seu75"]
@@ -31,8 +33,29 @@
 [ext_resource type="PackedScene" uid="uid://dl2brcdmmeb71" path="res://Skeleton.tscn" id="23_d13ii"]
 [ext_resource type="PackedScene" uid="uid://lkri85kfg72x" path="res://kenney_graveyard-kit_5.0/Models/GLB format/hay-bale-bundled.glb" id="27_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://ccdy2a42ouhiy" path="res://CryptChest.tscn" id="31_seu75"]
+[ext_resource type="PackedScene" uid="uid://cxa1vcal0v6uj" path="res://shop.tscn" id="32_htxhm"]
+[ext_resource type="PackedScene" uid="uid://c6gtwxcmmapbs" path="res://kenney_pirate-kit/Models/GLB format/patch-sand-foliage.glb" id="33_h8e4i"]
+[ext_resource type="PackedScene" uid="uid://bk6dpeowam63u" path="res://kenney_pirate-kit/Models/GLB format/ship-pirate-large.glb" id="34_4lmeg"]
+[ext_resource type="PackedScene" uid="uid://devwgo4iccyc8" path="res://kenney_pirate-kit/Models/GLB format/ship-ghost.glb" id="35_0cp0l"]
+[ext_resource type="PackedScene" uid="uid://d4klt44e0rnlc" path="res://kenney_pirate-kit/Models/GLB format/ship-large.glb" id="36_d2t1y"]
+[ext_resource type="PackedScene" uid="uid://dlw3sgkv1fln1" path="res://kenney_pirate-kit/Models/GLB format/cannon-mobile.glb" id="37_gngh3"]
+[ext_resource type="PackedScene" uid="uid://eyrgn1goh7j5" path="res://kenney_pirate-kit/Models/GLB format/castle-gate.glb" id="38_0n3wm"]
+[ext_resource type="PackedScene" uid="uid://b8b8p31jea3xp" path="res://kenney_pirate-kit/Models/GLB format/castle-wall.glb" id="39_qnost"]
+[ext_resource type="PackedScene" uid="uid://e4dk4l41fmn" path="res://kenney_pirate-kit/Models/GLB format/cannon.glb" id="40_wnkbs"]
+[ext_resource type="PackedScene" uid="uid://cfi7l5nhe4s48" path="res://kenney_pirate-kit/Models/GLB format/tower-complete-large.glb" id="41_4lmeg"]
+[ext_resource type="PackedScene" uid="uid://beijmry4t55o" path="res://kenney_pirate-kit/Models/GLB format/hole.glb" id="44_0cbny"]
+[ext_resource type="PackedScene" uid="uid://qad1r5dffej7" path="res://kenney_pirate-kit/Models/GLB format/rocks-c.glb" id="45_hrvbo"]
+[ext_resource type="PackedScene" uid="uid://bx5xoq6et1m6g" path="res://kenney_pirate-kit/Models/GLB format/mast.glb" id="46_uypp3"]
+[ext_resource type="PackedScene" uid="uid://3fudw2n007n2" path="res://kenney_pirate-kit/Models/GLB format/crate.glb" id="47_blkrb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_f6a44"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cbny"]
+transparency = 1
+albedo_color = Color(0, 0.7607843, 0.7647059, 0.29411766)
+roughness = 0.1
 
 [sub_resource type="Resource" id="Resource_a6jrf"]
 script = ExtResource("2_0odxb")
@@ -123,6 +146,33 @@ transform = Transform3D(6.905, 0, 0, 0, 1, 0, 0, 0, 3.505, 0, 0, 0)
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 2.395, 0, 31.999998, 0)
 physics_material_override = SubResource("PhysicsMaterial_0xm2m")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Ground" unique_id=1957668085]
+transform = Transform3D(13.19, 0, 0, 0, 16.44, 0, 0, 0, 23.08, 30.901602, -29.897755, -1.4647245)
+mesh = SubResource("PlaneMesh_f6a44")
+surface_material_override/0 = SubResource("StandardMaterial3D_0cbny")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Map/Ground" unique_id=1941764834]
+transform = Transform3D(0.47159746, 0, 21.346344, 0, 16.44, 0, -13.181567, 0, 0.7637093, -3.198, -29.898, -21.433)
+mesh = SubResource("PlaneMesh_f6a44")
+surface_material_override/0 = SubResource("StandardMaterial3D_0cbny")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Map/Ground" unique_id=1003892135]
+transform = Transform3D(13.19, 0, 0, 0, 16.44, 0, 0, 0, 21.36, 56.964046, -29.897755, -1.4647245)
+mesh = SubResource("PlaneMesh_f6a44")
+surface_material_override/0 = SubResource("StandardMaterial3D_0cbny")
+
+[node name="palm-straight2" parent="Map/Ground" unique_id=331251077 instance=ExtResource("2_wnkbs")]
+transform = Transform3D(0.212, 0, 0, 0, 1.46, 0, 0, 0, 0.174, 37.192368, -29.654694, -3.7789085)
+
+[node name="palm-straight3" parent="Map/Ground" unique_id=1852865688 instance=ExtResource("2_wnkbs")]
+transform = Transform3D(0.212, 0, 0, 0, 1.46, 0, 0, 0, 0.17400001, 38.48795, -29.654694, -3.7789085)
+
+[node name="palm-detailed-bend2" parent="Map/Ground" unique_id=198871097 instance=ExtResource("3_f6a44")]
+transform = Transform3D(0.236, 0, 0, 0, 1.63, 0, 0, 0, 0.194, 38.34311, -29.332481, -4.6872063)
+
+[node name="palm-detailed-bend3" parent="Map/Ground" unique_id=574968201 instance=ExtResource("3_f6a44")]
+transform = Transform3D(-0.19646677, 0, -0.10748484, 0, 1.6300002, 0, 0.13075474, 0, -0.16150238, 38.34311, -29.332481, -1.5561832)
+
 [node name="HTerrain" type="Node3D" parent="Map" unique_id=1635612440]
 script = ExtResource("1_1u8w0")
 centered = true
@@ -210,7 +260,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56965995, 0.996, 20.472502)
 [node name="gravestone-cross-large4" parent="." unique_id=1874763681 instance=ExtResource("7_kek77")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2635136, 0.996, 20.472502)
 
-[node name="cross2" parent="." unique_id=1911025409 instance=ExtResource("8_4c57u")]
+[node name="cross2" parent="." unique_id=440560773 instance=ExtResource("8_4c57u")]
 transform = Transform3D(-4.138122, 0, 3.006521, 0, 5.115, 0, -3.006521, 0, -4.138122, -2.3154888, -0.004, 8.747593)
 
 [node name="Debris" parent="cross2" unique_id=354135035 instance=ExtResource("9_efxa6")]
@@ -265,7 +315,7 @@ transform = Transform3D(3.985, 0, 0, 0, 3.985, 0, 0, 0, 3.985, -19, -0.004, 20)
 transform = Transform3D(0.7936295, 0, 0.60840136, 0, 1, 0, -0.60840136, 0, 0.7936295, -5.269762, -0.004, -11.862196)
 
 [node name="Rockntrees2" parent="Lightpost" unique_id=1532559412 instance=ExtResource("16_1u8w0")]
-transform = Transform3D(0.998795, 0, -0.049076386, 0, 1, 0, 0.049076386, 0, 0.998795, 3.78077, -0.0040000007, -12.937624)
+transform = Transform3D(0.998795, 0, -0.049076386, 0, 1, 0, 0.049076386, 0, 0.998795, 3.7807698, -0.004000001, -12.937624)
 
 [node name="DebrisScary" parent="Lightpost/Rockntrees2" unique_id=1921986015 instance=ExtResource("17_0odxb")]
 transform = Transform3D(-0.7378074, 0, -0.67501086, 0, 1, 0, 0.67501086, 0, -0.7378074, 11.469911, -0.004, 14.403571)
@@ -318,10 +368,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7042392, -0.004, 7.834906)
 [node name="candle-multiple3" parent="." unique_id=1086051149 instance=ExtResource("22_0odxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1827104, -0.004, 8.162062)
 
-[node name="hay-bale-bundled2" parent="." unique_id=645079274 instance=ExtResource("27_a6jrf")]
+[node name="hay-bale-bundled2" parent="." unique_id=662645333 instance=ExtResource("27_a6jrf")]
 transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 32, 0, -23)
 
-[node name="hay-bale-bundled3" parent="." unique_id=725316503 instance=ExtResource("27_a6jrf")]
+[node name="hay-bale-bundled3" parent="." unique_id=178728854 instance=ExtResource("27_a6jrf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -23)
 
 [node name="CharacterBody3D" parent="." unique_id=1221722749 instance=ExtResource("22_ryguw")]
@@ -331,4 +381,61 @@ transform = Transform3D(-0.7097306, 0, -0.7044732, 0, 1, 0, 0.7044732, 0, -0.709
 transform = Transform3D(0.59727526, 0, 0.80203635, 0, 1, 0, -0.80203635, 0, 0.59727526, 30.280537, 0.014256835, -3.6766272)
 
 [node name="CryptCh" parent="." unique_id=456449926 instance=ExtResource("31_seu75")]
-transform = Transform3D(0.805, 0, 0, 0, 0.805, 0, 0, 0, 0.805, 27, 0.415, -30)
+transform = Transform3D(-0.32262883, 0, -0.2448176, 0, 0.405, 0, 0.2448176, 0, -0.32262883, 9.10285, 0.23139909, -33.23683)
+
+[node name="CryptCh2" parent="." unique_id=1636582240 instance=ExtResource("31_seu75")]
+transform = Transform3D(0.2036227, 0, 0.77882147, 0, 0.8049998, 0, -0.77882147, 0, 0.2036227, 39.28269, 0.415, 22.397495)
+
+[node name="Shop" parent="." unique_id=894419517 instance=ExtResource("32_htxhm")]
+transform = Transform3D(1.0128723, 0, -0.50098866, 0, 1.13, 0, 0.50098866, 0, 1.0128723, 28.485432, 0.0035963058, -32.071667)
+
+[node name="patch-sand-foliage2" parent="." unique_id=880637726 instance=ExtResource("33_h8e4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.15146, 0, -23.49413)
+
+[node name="ship-pirate-large2" parent="." unique_id=1722420449 instance=ExtResource("34_4lmeg")]
+transform = Transform3D(1.28, 0, 0, 0, 1.28, 0, 0, 0, 1.28, 204.59163, 0.8244486, -72.93097)
+
+[node name="ship-ghost2" parent="." unique_id=1788850640 instance=ExtResource("35_0cp0l")]
+transform = Transform3D(-0.6438166, 0, -0.7651799, 0, 1, 0, 0.7651799, 0, -0.6438166, 344.1668, 0.58662415, -51.39811)
+
+[node name="ship-large2" parent="." unique_id=1869874916 instance=ExtResource("36_d2t1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 269.97314, 0.5294895, -110.74448)
+
+[node name="cannon-mobile2" parent="." unique_id=786431912 instance=ExtResource("37_gngh3")]
+transform = Transform3D(-0.03733804, 0, 0.78911716, 0, 0.79, 0, -0.78911716, 0, -0.03733804, 206.48007, 3.5092015, -75.256294)
+
+[node name="cannon-mobile3" parent="." unique_id=315796892 instance=ExtResource("37_gngh3")]
+transform = Transform3D(0.019204993, 0, -0.7897665, 0, 0.78999996, 0, 0.7897665, 0, 0.019204993, 202.1657, 3.5092015, -75.256294)
+
+[node name="castle-gate2" parent="." unique_id=1374226637 instance=ExtResource("38_0n3wm")]
+transform = Transform3D(0.31616658, 0, -2.3387258, 0, 2.36, 0, 2.3387258, 0, 0.31616658, 104.58098, 0.13699794, -20.150372)
+
+[node name="castle-wall2" parent="." unique_id=1045133059 instance=ExtResource("39_qnost")]
+transform = Transform3D(0.98149186, 0, -2.314116, 0, 2.33, 0, 8.362599, 0, 0.27160046, 106.16067, 0.27977037, -7.6615577)
+
+[node name="castle-wall3" parent="." unique_id=955372123 instance=ExtResource("39_qnost")]
+transform = Transform3D(0.73786736, 0, -2.314116, 0, 2.33, 0, 6.286847, 0, 0.27160046, 103.103035, 0.27977037, -30.931356)
+
+[node name="cannon2" parent="." unique_id=1354580320 instance=ExtResource("40_wnkbs")]
+transform = Transform3D(-0.08929412, 0, 0.9960053, 0, 1, 0, -0.9960053, 0, -0.08929412, 113.95311, 2.935243, -15.066465)
+
+[node name="tower-complete-large2" parent="." unique_id=849048368 instance=ExtResource("41_4lmeg")]
+transform = Transform3D(1.0639904, 0, -0.89444077, 0, 1.39, 0, 0.89444077, 0, 1.0639904, 99.978325, 9.649153, -56.72481)
+
+[node name="tower-complete-large3" parent="." unique_id=1484532804 instance=ExtResource("41_4lmeg")]
+transform = Transform3D(0.1391293, 0, -1.8447609, 0, 1.85, 0, 1.8447609, 0, 0.1391293, 108.011, 3.3095646, 2.3467288)
+
+[node name="hole2" parent="." unique_id=864554350 instance=ExtResource("44_0cbny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.5557, 3.0115042, -23.348125)
+
+[node name="rocks-c2" parent="." unique_id=949275815 instance=ExtResource("45_hrvbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250.16586, 3.010769, -17.5545)
+
+[node name="mast2" parent="." unique_id=1754540519 instance=ExtResource("46_uypp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 247.30785, 2.9573812, -11.00593)
+
+[node name="crate2" parent="." unique_id=253957306 instance=ExtResource("47_blkrb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.3676, 2.9619918, -34.340595)
+
+[node name="CryptCh3" parent="." unique_id=92160105 instance=ExtResource("31_seu75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.9293, 3.4906168, -36.410168)

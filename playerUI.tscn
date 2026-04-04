@@ -13,6 +13,18 @@ offset_right = 1112.0
 offset_bottom = 324.0
 script = ExtResource("1_pm3rl")
 
+[node name="Gold" type="Control" parent="Control" unique_id=428611539]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GoldAmount" type="Label" parent="Control/Gold" unique_id=913312765]
+layout_mode = 0
+offset_left = 1705.0
+offset_top = 140.0
+offset_right = 1799.0
+offset_bottom = 171.0
+
 [node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1129609677]
 layout_mode = 0
 offset_right = 518.0
@@ -39,3 +51,37 @@ layout_mode = 0
 offset_top = 102.0
 offset_right = 75.0
 offset_bottom = 125.0
+
+[node name="loot" type="Label" parent="Control" unique_id=1442254291]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 15.0
+offset_right = 624.0
+offset_bottom = 52.0
+
+[node name="XP" type="Control" parent="." unique_id=1550494711]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="xp_progress" type="ProgressBar" parent="XP" unique_id=799306036]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 30.0
+offset_right = 1363.0
+offset_bottom = 57.0
+
+[node name="Level" type="Label" parent="XP" unique_id=637604478]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 68.0
+offset_right = 775.0
+offset_bottom = 91.0
+
+[node name="FPS" type="Label" parent="XP" unique_id=1451403530 groups=["FPS"]]
+layout_mode = 0
+offset_left = 1516.0
+offset_top = 27.0
+offset_right = 1634.0
+offset_bottom = 70.0
