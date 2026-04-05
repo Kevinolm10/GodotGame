@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpj435hd17v3"]
+
+[ext_resource type="Script" uid="uid://bfnnoyfidgebo" path="res://item_slot.gd" id="1_n6cxc"]
+
+[node name="item_slot" type="PanelContainer" unique_id=2115773483]
+script = ExtResource("1_n6cxc")

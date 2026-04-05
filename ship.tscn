@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dfx8040borqv4"]
+
+[ext_resource type="Script" uid="uid://df7vkhscojfk4" path="res://enemy_ship.gd" id="1_78o8j"]
+[ext_resource type="PackedScene" uid="uid://bk6dpeowam63u" path="res://kenney_pirate-kit/Models/GLB format/ship-pirate-large.glb" id="1_c3vuw"]
+[ext_resource type="PackedScene" uid="uid://e4dk4l41fmn" path="res://kenney_pirate-kit/Models/GLB format/cannon.glb" id="2_78o8j"]
+[ext_resource type="PackedScene" uid="uid://c0lytgxa6t6nd" path="res://canonball.tscn" id="2_xpsff"]
+[ext_resource type="PackedScene" uid="uid://ns06wgsfbnsw" path="res://Blender obj/CryptChest.glb" id="3_xpsff"]
+[ext_resource type="PackedScene" uid="uid://cna7k0hirhbsi" path="res://kenney_pirate-kit/Models/GLB format/barrel.glb" id="4_pb2vj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_78o8j"]
+
+[node name="Ship" type="RigidBody3D" unique_id=1283295175]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+script = ExtResource("1_78o8j")
+cannonball_scene = ExtResource("2_xpsff")
+
+[node name="Hull" parent="." unique_id=1722420449 instance=ExtResource("1_c3vuw")]
+
+[node name="l_cannon" parent="Hull" unique_id=1354580320 instance=ExtResource("2_78o8j")]
+transform = Transform3D(0.0110891685, 0, 0.5998975, 0, 0.6, 0, -0.5998975, 0, 0.0110891685, 2.0550756, 2.2620718, -1.880327)
+
+[node name="r_cannon" parent="Hull" unique_id=1769009684 instance=ExtResource("2_78o8j")]
+transform = Transform3D(-0.013287785, 0, -0.5998528, 0, 0.6, 0, 0.5998528, 0, -0.013287785, -1.975496, 2.2620718, -1.880327)
+
+[node name="CryptChest" parent="Hull" unique_id=1106998519 instance=ExtResource("3_xpsff")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 3.0399117, 2.8242905)
+
+[node name="ship-barrel" parent="." unique_id=951914552 instance=ExtResource("4_pb2vj")]
+transform = Transform3D(0.58, 0, 0, 0, 0.58, 0, 0, 0, 0.58, 1.3217031, 3.464922, -5.635172)
+
+[node name="DetectionZone" type="Area3D" parent="." unique_id=1605514610]
+transform = Transform3D(59.24, 0, 0, 0, 59.24, 0, 0, 0, 59.24, 0, 0, 0)
+
+[node name="DetectionShape" type="CollisionShape3D" parent="DetectionZone" unique_id=554859006]
+shape = SubResource("SphereShape3D_78o8j")
+
+[node name="Lgun_Ray" type="RayCast3D" parent="DetectionZone" unique_id=858924218]
+transform = Transform3D(-0.11447882, -1.1975352, 0, 1.7833292, -0.07687442, 0, 0, 0, 0.945, 0.035564784, 0.03282038, -0.032984965)
+
+[node name="Rgun_Ray" type="RayCast3D" parent="DetectionZone" unique_id=65819804]
+transform = Transform3D(0.11447857, 1.1975325, 0.001962778, 1.7833292, -0.07687442, -9.2241687e-10, 0.00023777231, 0.002487297, -0.94499797, -0.039461084, 0.032820374, -0.032984957)

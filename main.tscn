@@ -36,15 +36,12 @@
 [ext_resource type="PackedScene" uid="uid://ccdy2a42ouhiy" path="res://CryptChest.tscn" id="31_seu75"]
 [ext_resource type="PackedScene" uid="uid://cxa1vcal0v6uj" path="res://shop.tscn" id="32_htxhm"]
 [ext_resource type="PackedScene" uid="uid://c6gtwxcmmapbs" path="res://kenney_pirate-kit/Models/GLB format/patch-sand-foliage.glb" id="33_h8e4i"]
-[ext_resource type="PackedScene" uid="uid://bk6dpeowam63u" path="res://kenney_pirate-kit/Models/GLB format/ship-pirate-large.glb" id="34_4lmeg"]
-[ext_resource type="PackedScene" uid="uid://devwgo4iccyc8" path="res://kenney_pirate-kit/Models/GLB format/ship-ghost.glb" id="35_0cp0l"]
-[ext_resource type="PackedScene" uid="uid://d4klt44e0rnlc" path="res://kenney_pirate-kit/Models/GLB format/ship-large.glb" id="36_d2t1y"]
-[ext_resource type="PackedScene" uid="uid://dlw3sgkv1fln1" path="res://kenney_pirate-kit/Models/GLB format/cannon-mobile.glb" id="37_gngh3"]
 [ext_resource type="PackedScene" uid="uid://eyrgn1goh7j5" path="res://kenney_pirate-kit/Models/GLB format/castle-gate.glb" id="38_0n3wm"]
 [ext_resource type="PackedScene" uid="uid://b8b8p31jea3xp" path="res://kenney_pirate-kit/Models/GLB format/castle-wall.glb" id="39_qnost"]
 [ext_resource type="PackedScene" uid="uid://e4dk4l41fmn" path="res://kenney_pirate-kit/Models/GLB format/cannon.glb" id="40_wnkbs"]
 [ext_resource type="PackedScene" uid="uid://cfi7l5nhe4s48" path="res://kenney_pirate-kit/Models/GLB format/tower-complete-large.glb" id="41_4lmeg"]
 [ext_resource type="PackedScene" uid="uid://beijmry4t55o" path="res://kenney_pirate-kit/Models/GLB format/hole.glb" id="44_0cbny"]
+[ext_resource type="PackedScene" uid="uid://dfx8040borqv4" path="res://ship.tscn" id="45_0n3wm"]
 [ext_resource type="PackedScene" uid="uid://qad1r5dffej7" path="res://kenney_pirate-kit/Models/GLB format/rocks-c.glb" id="45_hrvbo"]
 [ext_resource type="PackedScene" uid="uid://bx5xoq6et1m6g" path="res://kenney_pirate-kit/Models/GLB format/mast.glb" id="46_uypp3"]
 [ext_resource type="PackedScene" uid="uid://3fudw2n007n2" path="res://kenney_pirate-kit/Models/GLB format/crate.glb" id="47_blkrb"]
@@ -219,7 +216,7 @@ metadata/SimpleGrassTextured = "2.0.5"
 environment = SubResource("Environment_272bh")
 
 [node name="MainCharacter" parent="." unique_id=893081045 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-0.6355258, 0, 0.7720796, 0, 1, 0, -0.7720796, 0, -0.6355258, 33.06691, -0.004, -20.361164)
+transform = Transform3D(-0.6355258, 0, 0.7720796, 0, 1, 0, -0.7720796, 0, -0.6355258, 28.7686, 1.1386228, -27.776142)
 
 [node name="Crypt" parent="." unique_id=1333612682 instance=ExtResource("3_h2yge")]
 transform = Transform3D(2.4635425, 0, 2.5212266, 0, 3.525, 0, -2.5212266, 0, 2.4635425, -20.629492, -0.004, -13.97734)
@@ -393,21 +390,6 @@ transform = Transform3D(1.0128723, 0, -0.50098866, 0, 1.13, 0, 0.50098866, 0, 1.
 [node name="patch-sand-foliage2" parent="." unique_id=880637726 instance=ExtResource("33_h8e4i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.15146, 0, -23.49413)
 
-[node name="ship-pirate-large2" parent="." unique_id=1722420449 instance=ExtResource("34_4lmeg")]
-transform = Transform3D(1.28, 0, 0, 0, 1.28, 0, 0, 0, 1.28, 204.59163, 0.8244486, -72.93097)
-
-[node name="ship-ghost2" parent="." unique_id=1788850640 instance=ExtResource("35_0cp0l")]
-transform = Transform3D(-0.6438166, 0, -0.7651799, 0, 1, 0, 0.7651799, 0, -0.6438166, 344.1668, 0.58662415, -51.39811)
-
-[node name="ship-large2" parent="." unique_id=1869874916 instance=ExtResource("36_d2t1y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 269.97314, 0.5294895, -110.74448)
-
-[node name="cannon-mobile2" parent="." unique_id=786431912 instance=ExtResource("37_gngh3")]
-transform = Transform3D(-0.03733804, 0, 0.78911716, 0, 0.79, 0, -0.78911716, 0, -0.03733804, 206.48007, 3.5092015, -75.256294)
-
-[node name="cannon-mobile3" parent="." unique_id=315796892 instance=ExtResource("37_gngh3")]
-transform = Transform3D(0.019204993, 0, -0.7897665, 0, 0.78999996, 0, 0.7897665, 0, 0.019204993, 202.1657, 3.5092015, -75.256294)
-
 [node name="castle-gate2" parent="." unique_id=1374226637 instance=ExtResource("38_0n3wm")]
 transform = Transform3D(0.31616658, 0, -2.3387258, 0, 2.36, 0, 2.3387258, 0, 0.31616658, 104.58098, 0.13699794, -20.150372)
 
@@ -440,3 +422,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 264.3676, 2.9619918, -34.3405
 
 [node name="CryptCh3" parent="." unique_id=92160105 instance=ExtResource("31_seu75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.9293, 3.4906168, -36.410168)
+
+[node name="Ship2" parent="." unique_id=235484258 groups=["pirate_ship"] instance=ExtResource("45_0n3wm")]
+transform = Transform3D(1.21, 0, 0, 0, 1.21, 0, 0, 0, 1.21, 186.5258, 1.4680731, -49.56648)
+faction = "blue"
+patrol_speed = 3.0
+patrol_points = Array[NodePath]([NodePath("../PatrolPoint1"), NodePath("../PatrolPoint2"), NodePath("../PatrolPoint3")])
+
+[node name="PatrolPoint1" type="Node3D" parent="." unique_id=1444122877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.22516, 3.7848217, 0)
+
+[node name="PatrolPoint2" type="Node3D" parent="." unique_id=1689169475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 267.61523, 0, 52.751404)
+
+[node name="PatrolPoint3" type="Node3D" parent="." unique_id=889820305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.25797, 0, -110.920265)

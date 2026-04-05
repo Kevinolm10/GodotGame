@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c0lytgxa6t6nd"]
+
+[ext_resource type="Script" uid="uid://v2o8duerg3cl" path="res://canonball.gd" id="1_du1a4"]
+[ext_resource type="PackedScene" uid="uid://dljt2wfxfx757" path="res://kenney_pirate-kit/Models/GLB format/cannon-ball.glb" id="2_mganj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o17xv"]
+
+[node name="Canonball" type="RigidBody3D" unique_id=2125818635]
+script = ExtResource("1_du1a4")
+
+[node name="CanonballMesh" parent="." unique_id=595828899 instance=ExtResource("2_mganj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1811601016]
+shape = SubResource("SphereShape3D_o17xv")

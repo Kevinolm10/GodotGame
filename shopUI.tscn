@@ -28,10 +28,10 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Item1" type="Label" parent="PanelContainer/ItemContainer" unique_id=2093602888]
+[node name="Item_Image" type="TextureRect" parent="PanelContainer/ItemContainer" unique_id=1379253954]
 layout_mode = 2
 
-[node name="Item2" type="Label" parent="PanelContainer/ItemContainer" unique_id=444876270]
+[node name="Item_label" type="Label" parent="PanelContainer/ItemContainer" unique_id=444876270]
 layout_mode = 2
 
 [node name="ButtonContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1952979886]

@@ -1,9 +1,9 @@
 extends Node3D
 
-@onready var ground = $Map/Ground
 var fps_label: Label = null
 
 func _ready() -> void:
+
 	Engine.max_fps = 240
 	call_deferred("_create_world_border")
 	#get_tree().debug_collisions_hint = true
@@ -38,5 +38,5 @@ func _create_world_border() -> void:
 func _process(_delta: float) -> void:
 	if fps_label == null:
 		fps_label = get_tree().get_first_node_in_group("FPS")
-	if fps_label:
-		fps_label.text = "FPS: " + str(Engine.get_frames_per_second())
+		return  # wait until next frame once found
+	fps_label.text = "FPS: " + str(Engine.get_frames_per_second())
