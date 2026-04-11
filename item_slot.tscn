@@ -4,3 +4,9 @@
 
 [node name="item_slot" type="PanelContainer" unique_id=2115773483]
 script = ExtResource("1_n6cxc")
+
+[node name="item_image" type="TextureRect" parent="." unique_id=1937299178]
+layout_mode = 2
+
+[node name="item_label" type="Label" parent="." unique_id=1259703856]
+layout_mode = 2

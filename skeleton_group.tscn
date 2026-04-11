@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://7dygb7d4xnfb"]
+
+[ext_resource type="PackedScene" uid="uid://dl2brcdmmeb71" path="res://Skeleton.tscn" id="1_uet8r"]
+
+[node name="skeleton_group" type="Node3D" unique_id=581688059]
+
+[node name="CharacterBody3D" parent="." unique_id=795979924 instance=ExtResource("1_uet8r")]
+
+[node name="CharacterBody3D2" parent="." unique_id=1026568805 instance=ExtResource("1_uet8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.508503, 0, 1.3604858)
+
+[node name="CharacterBody3D3" parent="." unique_id=268119447 instance=ExtResource("1_uet8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9413829, 0, 1.3604858)

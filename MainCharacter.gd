@@ -10,19 +10,27 @@ const FOV_DEFAULT       := 70.0
 const FOV_RUN           := 100.0
 const FOV_SMOOTH        := 5.0
 const ATTACK_RANGE      := 2.0
-const ATTACK_DAMAGE     := 50
+const ATTACK_COOLDOWN     : float = 1.2
+
 
 # ─── Variables ──────────────────────────────────────────────────────────────────
 var inventory      : Array = []
 var xp_gained_from : Array = []
+var attack_cooldown_timer : float = 0.0
+var ATTACK_DAMAGE     := 25
+
 
 # ─── State ──────────────────────────────────────────────────────────────────────
 var health        : int  = 100
+var health_regen : int = 10
 var is_dead       : bool = false
 var is_jumping    : bool = false
 var is_attacking  : bool = false
 var is_interacting: bool = false
 var is_paused     : bool = false
+var is_in_combat  : bool = false
+var combat_timer  : float = 0.0
+const COMBAT_TIMEOUT := 5.0
 
 # ─── Level / XP ─────────────────────────────────────────────────────────────────
 var level           : int = 1
@@ -56,6 +64,7 @@ func _ready() -> void:
 	for enemy in get_tree().get_nodes_in_group("enemy"):
 		enemy.respawned.connect(_on_enemy_respawned.bind(enemy))
 
+	regen()
 # ─── Input ──────────────────────────────────────────────────────────────────────
 func _input(event: InputEvent) -> void:
 	if is_dead:
@@ -82,6 +91,12 @@ func _toggle_pause() -> void:
 func _physics_process(delta: float) -> void:
 	if is_dead or is_paused:
 		return
+	if is_in_combat:
+		combat_timer -= delta
+		if combat_timer <= 0.0:
+			is_in_combat = false
+	if attack_cooldown_timer > 0.0:
+		attack_cooldown_timer -= delta
 	_apply_gravity(delta)
 	_handle_attack()
 	_handle_interact()
@@ -96,8 +111,9 @@ func _apply_gravity(delta: float) -> void:
 
 # ─── Attack ─────────────────────────────────────────────────────────────────────
 func _handle_attack() -> void:
-	if Input.is_action_just_pressed("attack") and not is_attacking and not is_interacting:
+	if Input.is_action_just_pressed("attack") and not is_attacking and not is_interacting and attack_cooldown_timer <= 0.0:
 		is_attacking = true
+		attack_cooldown_timer = ATTACK_COOLDOWN
 		anim.play("attack-melee-right")
 		for enemy in get_tree().get_nodes_in_group("enemy"):
 			if global_position.distance_to(enemy.global_position) < ATTACK_RANGE:
@@ -172,12 +188,32 @@ func take_damage(amount: int) -> void:
 	if is_dead:
 		return
 	health = max(health - amount, 0)
+	is_in_combat = true
+	combat_timer = COMBAT_TIMEOUT
 	if ui:
 		ui.update_health(health)
 	if health <= 0:
 		die()
 
-# ─── Life cycle ─────────────────────────────────────────────────────────────────
+# ─── Regen ─────────────────────────────────────────────────────────────────────
+
+func _any_enemy_chasing() -> bool:
+	for e in get_tree().get_nodes_in_group("enemy"):
+		if e.player_in_range:
+			return true
+	return false
+
+func regen() -> void:
+	while true:
+		await get_tree().create_timer(4.0).timeout
+		if not is_dead and not is_in_combat and not _any_enemy_chasing():
+			health = min(health + health_regen, GameState.max_health)
+			if ui:
+				ui.update_health(health)
+				print("Health: ", health)
+
+
+# ─── Life cycle ────────────────────────	─────────────────────────────────────────
 func die() -> void:
 	if is_dead:
 		return
@@ -242,7 +278,9 @@ func level_up() -> void:
 	xp_to_next_level  = int(xp_to_next_level * 1.5)
 	health           += 10
 	GameState.max_health += 10
+	ATTACK_DAMAGE += 5
 	print("Level Up! New level:", level, " XP for next level:", xp_to_next_level)
+	print(ATTACK_DAMAGE)
 	if ui:
 		ui.update_health(health)
 	_refresh_xp_ui()

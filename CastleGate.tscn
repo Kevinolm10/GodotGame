@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dmvqk7qfcwdhc"]
+
+[ext_resource type="PackedScene" uid="uid://eyrgn1goh7j5" path="res://kenney_pirate-kit/Models/GLB format/castle-gate.glb" id="1_nf4dd"]
+[ext_resource type="PackedScene" uid="uid://b8b8p31jea3xp" path="res://kenney_pirate-kit/Models/GLB format/castle-wall.glb" id="2_wckv7"]
+[ext_resource type="PackedScene" uid="uid://rioeqrtxgo2n" path="res://kenney_pirate-kit/Models/FBX format/castle-window.fbx" id="3_0vp6x"]
+[ext_resource type="PackedScene" uid="uid://dwgnrl0k615j1" path="res://kenney_pirate-kit/Models/FBX format/tower-complete-large.fbx" id="4_x4q1o"]
+[ext_resource type="PackedScene" uid="uid://dlw3sgkv1fln1" path="res://kenney_pirate-kit/Models/GLB format/cannon-mobile.glb" id="5_tadrn"]
+[ext_resource type="PackedScene" uid="uid://e4dk4l41fmn" path="res://kenney_pirate-kit/Models/GLB format/cannon.glb" id="6_k1ka5"]
+[ext_resource type="PackedScene" uid="uid://ch1lombxv8fow" path="res://kenney_pirate-kit/Models/GLB format/flag-pennant.glb" id="7_l4lfj"]
+[ext_resource type="PackedScene" uid="uid://j6r01darcxj2" path="res://kenney_pirate-kit/Models/GLB format/flag.glb" id="8_pst8k"]
+
+[node name="CastlePiece" type="Node3D" unique_id=1017253382]
+
+[node name="CastleGate" parent="." unique_id=1778002847 instance=ExtResource("1_nf4dd")]
+
+[node name="Wall_r" parent="." unique_id=733287438 instance=ExtResource("2_wckv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Wall_l" parent="." unique_id=1409833249 instance=ExtResource("2_wckv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="castle-window_l" parent="." unique_id=676903717 instance=ExtResource("3_0vp6x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="castle-window_r" parent="." unique_id=1218659902 instance=ExtResource("3_0vp6x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="tower_r" parent="." unique_id=725259009 instance=ExtResource("4_x4q1o")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 7, 0, 0)
+
+[node name="tower_l" parent="." unique_id=228849722 instance=ExtResource("4_x4q1o")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -7, 0, 0)
+
+[node name="CastleProps" type="Node3D" parent="." unique_id=1862111598]
+
+[node name="cannon_mobile" parent="CastleProps" unique_id=2000735875 instance=ExtResource("5_tadrn")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, -5, 0.4, 3)
+
+[node name="cannon_wall_l" parent="CastleProps" unique_id=1534690563 instance=ExtResource("6_k1ka5")]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, -3.48, 4, 0)
+
+[node name="canon_wall_r" parent="CastleProps" unique_id=818996451 instance=ExtResource("6_k1ka5")]
+transform = Transform3D(0.575, 0, 0, 0, 0.575, 0, 0, 0, 0.575, 3.53, 4, 0)
+
+[node name="flag-pennant2" parent="." unique_id=1931058570 instance=ExtResource("7_l4lfj")]
+transform = Transform3D(1.865, 0, 0, 0, 1.865, 0, 0, 0, 1.865, 5, 0, 3)
+
+[node name="flag2" parent="." unique_id=525342346 instance=ExtResource("8_pst8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 10, 0)

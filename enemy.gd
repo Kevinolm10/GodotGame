@@ -207,7 +207,7 @@ func die() -> void:
 	detection_area.monitorable = false
 	hitbox.monitoring          = false
 	_play_anim("die")
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(20.0).timeout
 	respawn()
 
 func respawn() -> void:

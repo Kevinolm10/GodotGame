@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckm32mkd10pls"]
 
-[ext_resource type="Script" uid="uid://cqqmlqur4y8sr" path="res://McharacterMovement.gd" id="1_li8uu"]
+[ext_resource type="Script" uid="uid://cqqmlqur4y8sr" path="res://MainCharacter.gd" id="1_li8uu"]
 [ext_resource type="PackedScene" uid="uid://cshqffk46725d" path="res://playerUI.tscn" id="3_ffy1q"]
 [ext_resource type="PackedScene" uid="uid://qw3kuasvqrvp" path="res://keeper.tscn" id="3_se01g"]
 

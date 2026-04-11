@@ -53,6 +53,11 @@ func _close_shop() -> void:
 func _populate_shop() -> void:
 	for child in item_container.get_children():
 		child.queue_free()
+	for item in items:
+		var slot = ItemSlot.instantiate()
+		item_container.add_child(slot)
+		slot.setup.call_deferred(item["name"], item["texture"])
+		print(items)
 
 	for item in items:
 		var slot = ItemSlot.instantiate()
